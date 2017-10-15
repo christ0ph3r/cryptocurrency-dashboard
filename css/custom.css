@@ -1,0 +1,86 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+}
+
+/**
+* Utilities
+*/
+
+.bg-super-dark {
+  background: #222 !important;
+}
+
+.bg-gradient {
+  background: radial-gradient(circle at bottom right,#009CFF 0,#AA81F3 100%);
+  color: #fff;
+}
+
+/**
+* Nav
+*/
+
+.nav-pills .nav-link.active {
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar-left {
+  left: 0;
+}
+
+.sidebar-right {
+  right: 0;
+}
+
+/* Sidebar navigation */
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+/**
+* Footer
+*/
+
+.footer-donate {
+  cursor: pointer;
+}
