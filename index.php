@@ -33,7 +33,7 @@
         </ul>
         <form id="search-form" class="form-inline mt-2 mt-md-0">
           <input id="search-term" class="form-control mr-sm-2 bg-dark text-muted" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-primary my-2 my-sm-0 cu-po" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -161,13 +161,13 @@
     <!-- Start of footer -->
     <ul class="nav justify-content-center fixed-bottom text-muted bg-super-dark">
       <li class="nav-item">
-        <a class="nav-link footer-donate" data-coin-id="bitcoin" data-toggle="modal" data-target="#donateModal">Donate BTC</a>
+        <a class="nav-link footer-donate cu-po" data-coin-id="bitcoin" data-toggle="modal" data-target="#donateModal">Donate BTC</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link footer-donate" data-coin-id="ethereum" data-toggle="modal" data-target="#donateModal">Donate ETH</a>
+        <a class="nav-link footer-donate cu-po" data-coin-id="ethereum" data-toggle="modal" data-target="#donateModal">Donate ETH</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link footer-donate" data-coin-id="litecoin" data-toggle="modal" data-target="#donateModal">Donate LTC</a>
+        <a class="nav-link footer-donate cu-po" data-coin-id="litecoin" data-toggle="modal" data-target="#donateModal">Donate LTC</a>
       </li>
     </ul>
     <!-- End of footer -->

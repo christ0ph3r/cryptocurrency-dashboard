@@ -1,17 +1,22 @@
 // Coin market API All Coins
-$.get("https://api.coinmarketcap.com/v1/ticker/?limit=100", function(data, status){
-  var newHTML = [];
-  $.each(data, function( index, value ) {
-    if (index === 0) {
-      getCoinTweets(value.name);
-      getCoinData(value.id);
-      newHTML.push('<li class="nav-item"><a class="nav-link active" href="#">' + value.rank + '. ' + '<span class="coin-name" data-coin-id="' + value.id + '">' + value.name + '</span></a></li>');
-    } else {
-      newHTML.push('<li class="nav-item"><a class="nav-link" href="#">' + value.rank + '. ' + '<span class="coin-name" data-coin-id="' + value.id + '">' + value.name + '</span></a></li>');
-    }
+function getAllCoins() {
+  $.get("https://api.coinmarketcap.com/v1/ticker/?limit=100", function(data, status){
+    var newHTML = [];
+    $.each(data, function( index, value ) {
+      if (index === 0) {
+        getCoinTweets(value.name);
+        getCoinData(value.id);
+        newHTML.push('<li class="nav-item"><a class="nav-link active" href="#">' + value.rank + '. ' + '<span class="coin-name" data-coin-id="' + value.id + '">' + value.name + '<span class="text-muted text-right float-right">$' + value.price_usd + '</span></span></a></li>');
+      } else {
+        newHTML.push('<li class="nav-item"><a class="nav-link" href="#">' + value.rank + '. ' + '<span class="coin-name" data-coin-id="' + value.id + '">' + value.name + ' <span class="text-muted text-right float-right">$' + value.price_usd + '</span></span></a></li>');
+      }
+    });
+    $("#coins-menu").html(newHTML.join(""));
   });
-  $("#coins-menu").html(newHTML.join(""));
-});
+}
+
+// Init all coins
+getAllCoins();
 
 // Coin market API Specific Coins
 // Pass in coinmarketcap id (example: bitcoin)
@@ -201,9 +206,11 @@ $("#search-form").submit(function(e) {
   e.preventDefault();
   $(".sidebar-left .nav-link").removeClass('active');
   var coinName = $("#search-term").val().toLowerCase();
-  var tweets = getCoinTweets(coinName);
-  var coindata = getCoinData(coinName);
-  $('[data-coin-id="' + coinName +  '"]').parent().addClass('active');
+  if (coinName) {
+    var tweets = getCoinTweets(coinName);
+    var coindata = getCoinData(coinName);
+    $('[data-coin-id="' + coinName +  '"]').parent().addClass('active');
+  }
 })
 
 // Refresh data
@@ -211,4 +218,5 @@ window.setInterval(function(){
   var coin = $("#current-coin").val();
   getCoinTweets(coin);
   getCoinData(coin);
+  getAllCoins();
 }, 10000);

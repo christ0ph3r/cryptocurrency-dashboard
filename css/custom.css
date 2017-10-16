@@ -29,6 +29,10 @@ h1 {
   color: #fff;
 }
 
+.cu-po {
+  cursor: pointer;
+}
+
 /**
 * Nav
 */
@@ -36,6 +40,10 @@ h1 {
 .nav-pills .nav-link.active {
   border-radius: 10px;
   margin: 0 10px;
+}
+
+.nav-link.active .text-muted {
+  color: #fff !important;
 }
 
 /*
@@ -75,12 +83,4 @@ h1 {
 
 .sidebar .nav-link {
   border-radius: 0;
-}
-
-/**
-* Footer
-*/
-
-.footer-donate {
-  cursor: pointer;
 }
