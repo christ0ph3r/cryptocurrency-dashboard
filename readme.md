@@ -55,7 +55,7 @@ $access_token_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 ## Like my work? Donate some coin!
 
 
-| Coin     | Addresss                                   |
+| Coin     | Address                                    |
 | -------- |:------------------------------------------:|
 | Bitcoin  | 1LFTccjYHbiVekdm8XYC1ucNqdGsAC3frc         |
 | Ethereum | 0x071Fe2Bb50430A3f6af398A410a78B67e1A783AE |
