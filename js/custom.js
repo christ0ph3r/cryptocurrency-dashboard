@@ -218,5 +218,5 @@ window.setInterval(function(){
   var coin = $("#current-coin").val();
   getCoinTweets(coin);
   getCoinData(coin);
-  getAllCoins();
+  // getAllCoins();
 }, 10000);
